@@ -84,7 +84,8 @@ Parameters:
   CfnresponseLayerArn:
     Description: cfnresponse Lambda layer ARN.
     Type: String
-    Default: cfnresponse-layer-arn
+    #Default: cfnresponse-layer-arn
+    Default: arn:aws:lambda:us-east-1:520899107739:layer:cfn-response-layer:1
   GitHubTokenSecretName:
     Description: GitHub PAT secret name. 
     Type: String
