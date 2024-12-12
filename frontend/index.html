@@ -96,10 +96,19 @@
 <div class="content-inner"><div class="wseSHBL"></div><div class="wseSHBR"></div><div class="wseSHTL"></div><div class="wseSHTR"></div></div></div></div></div>
 
 <!-- Paste your Kommunicate / Lex Web UI JavaScript plugin here --> 
-<div class="chatbot-container">
-                    <script src="https://dzljvn2olnglk.cloudfront.net/lex-web-ui-loader.min.js"></script>
-                    <script src="https://dzljvn2olnglk.cloudfront.net/site-loader.js"></script>
-                    </div>
+<script src="https://dzljvn2olnglk.cloudfront.net/lex-web-ui-loader.min.js"></script>
+<script>
+    var loaderOpts = {
+        baseUrl: 'https://dzljvn2olnglk.cloudfront.net/',
+        shouldLoadMinDeps: true
+    };
+    var loader = new ChatBotUiLoader.IframeLoader(loaderOpts);
+    loader.load()
+        .catch(function (error) { console.error(error); });
+</script>
+
+
+
 
 <!-- End of Lex Web UI IFrame Snippet--> 
 
